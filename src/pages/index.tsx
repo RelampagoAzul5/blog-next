@@ -1,28 +1,18 @@
+import HomePage from '@/containers/HomePage';
+import { getAllPosts } from '@/data/posts/get-all-posts';
 import { PostData } from '@/domain/posts/posts';
 import { GetStaticProps } from 'next';
-
-const getPosts = async (): Promise<PostData[]> => {
-  const posts = await fetch(`${process.env.API_URL}/posts`);
-  const jsonPosts = await posts.json();
-  return jsonPosts.data;
-};
 
 export type HomeProps = {
   posts: PostData[];
 };
 
 export default function Home({ posts }: HomeProps) {
-  return (
-    <div>
-      {posts.map((post) => (
-        <h2 key={post.slug}> {post.title}</h2>
-      ))}
-    </div>
-  );
+  return <HomePage posts={posts} />;
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getPosts();
+  const posts = await getAllPosts();
   return {
     props: { posts },
   };
