@@ -8,7 +8,7 @@ declare module 'styled-components' {
       white: string;
       lightGray: string;
       gray: string;
-      darkDray: string;
+      darkGray: string;
     };
     spacings: {
       small: string;
