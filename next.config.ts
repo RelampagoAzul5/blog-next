@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
     domains: ['res.cloudinary.com'],
   },
+  target: 'serverless',
 };
 
 export default nextConfig;
