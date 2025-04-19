@@ -1,3 +1,4 @@
+import { Post } from '@/components/Post';
 import { countAllPosts } from '@/data/posts/count-all-posts';
 import { getAllPosts } from '@/data/posts/get-all-posts';
 import { getPost } from '@/data/posts/get-post';
@@ -9,12 +10,7 @@ export type DynamicPostProps = {
 };
 
 export default function DynamicPost({ post }: DynamicPostProps) {
-  return (
-    <>
-      <p>{post.title}</p>
-      <p dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
-    </>
-  );
+  return <Post post={post} />;
 }
 export const getStaticPaths: GetStaticPaths = async () => {
   const numberOfPosts = await countAllPosts();
