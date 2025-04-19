@@ -12,7 +12,7 @@ export default function DynamicPost({ post }: DynamicPostProps) {
   return (
     <>
       <p>{post.title}</p>
-      {post.contentHtml}
+      <p dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
     </>
   );
 }
