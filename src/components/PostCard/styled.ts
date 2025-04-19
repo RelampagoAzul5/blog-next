@@ -12,6 +12,7 @@ export const PostCardCover = styled.div`
   margin-bottom: ${({ theme }) => theme.spacings.small};
 
   img {
+    object-fit: cover;
     width: 100%;
     display: block;
   }
