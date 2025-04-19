@@ -14,7 +14,7 @@ export type PostAuthor = {
   name: string;
   created_by: number;
   updated_by: number;
-  created_at: string;
+  createdAt: string;
   updated_at: string;
 };
 
@@ -23,7 +23,7 @@ export type PostCategory = {
   name: string;
   created_by: number;
   updated_by: number;
-  created_at: string;
+  createdAt: string;
   updated_at: string;
 };
 
@@ -58,7 +58,7 @@ export type PostCover = PostCoverFormat & {
   provider: string;
   created_by: number;
   updated_by: number;
-  created_at: string;
+  createdAt: string;
   updated_at: string;
   formats: {
     thumbnail: PostCoverFormat;
@@ -78,7 +78,7 @@ export type PostData = {
   category: PostCategory;
   created_by: PostCreatedBy;
   updated_by: PostCreatedBy;
-  created_at: string;
+  createdAt: string;
   updated_at: string;
   cover: PostCover;
 };
