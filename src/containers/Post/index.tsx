@@ -1,7 +1,7 @@
 import { PostData } from '@/domain/posts/posts';
-import { MainContainer } from '../MainContainer';
-import { Header } from '../header';
-import { Footer } from '../Footer';
+import { MainContainer } from '../../components/MainContainer';
+import { Header } from '../../components/header';
+import { Footer } from '../../components/Footer';
 export type PostProps = {
   post: PostData;
 };

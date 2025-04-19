@@ -1,4 +1,4 @@
-import { Post } from '@/components/Post';
+import { Post } from '@/containers/Post';
 import { countAllPosts } from '@/data/posts/count-all-posts';
 import { getAllPosts } from '@/data/posts/get-all-posts';
 import { getPost } from '@/data/posts/get-post';
