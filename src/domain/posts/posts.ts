@@ -1,5 +1,14 @@
 export type PostID = number;
 
+export type TextNode = {
+  text: string;
+  type?: string;
+};
+
+export type Block = {
+  type: string;
+  children: TextNode[];
+};
 export type PostAuthor = {
   id: PostID;
   name: string;
@@ -62,7 +71,8 @@ export type PostCover = PostCoverFormat & {
 export type PostData = {
   id: PostID;
   title: string;
-  content: string;
+  content: Block[];
+  contentHtml: string;
   slug: string;
   author: PostAuthor;
   category: PostCategory;

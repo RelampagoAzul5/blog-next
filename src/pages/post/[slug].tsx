@@ -9,7 +9,12 @@ export type DynamicPostProps = {
 };
 
 export default function DynamicPost({ post }: DynamicPostProps) {
-  return <p>{post.title}</p>;
+  return (
+    <>
+      <p>{post.title}</p>
+      {post.contentHtml}
+    </>
+  );
 }
 export const getStaticPaths: GetStaticPaths = async () => {
   const numberOfPosts = await countAllPosts();
