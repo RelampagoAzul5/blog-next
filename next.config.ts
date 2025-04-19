@@ -7,8 +7,10 @@ const nextConfig: NextConfig = {
     styledComponents: true,
   },
   images: {
+    unoptimized: true,
     domains: ['res.cloudinary.com'],
   },
+  output: 'export',
 };
 
 export default nextConfig;
